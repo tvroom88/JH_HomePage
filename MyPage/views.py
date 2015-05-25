@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import simplejson
+import datetime
+import uuid
+
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
@@ -6,13 +10,7 @@ from django.shortcuts import render_to_response, RequestContext, render
 from django.contrib import auth
 from django.contrib.auth.models import User
 from MyPage.models import *
-from django.utils import simplejson
 
-
-# //----------------
-import simplejson
-import datetime
-import uuid
 
 # Create your views here.
 
@@ -111,7 +109,6 @@ def photo(request):
 # mobile login--------------------------------------------
 @csrf_exempt
 def mobileLogin(request):
-    errMsg = "None"
 
     if request.method == 'POST':
          #Get Parameter
