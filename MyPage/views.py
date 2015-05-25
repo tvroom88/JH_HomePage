@@ -115,30 +115,29 @@ def mobileLogin(request):
 
     if request.method == 'POST':
          #Get Parameter
-        user_id = request.POST['user_id']
-        user_password = request.POST['user_password']
+        user_id = request.POST['newUserId']
+        user_password = request.POST['newUserPassWord']
 
-        # print user_id
-        # print user_password
         user = auth.authenticate(username=user_id, password=user_password)
         if user is not None:
             token = uuid.uuid4()
-            try:
-                obj = UserKey.objects.get(user=user)
-            except UserKey.DoesNotExist:
-                obj = UserKey.objects.create()
+            obj = UserKey.objects.get(user=user)
             obj.__dict__.update(user=user, token=token)
             obj.save()
 
-            result = {'result': 1, 'accessToken': obj.token}
+            user_token = UserKey.objects.get(user=user).token
+            result = {'result': 1, 'accessToken': user_token}
             return HttpResponse(simplejson.dumps(result), 'application/json')
         else:
 
-            result = {'result': 0, 'errorMsg': errMsg}
+            result = {'result': 0, 'accessToken': ''}
             return HttpResponse(simplejson.dumps(result), 'application/json')
+
+    # POST가 아닐경우?
     else:
-        result = {'result': 0, 'accessToken': '', 'errorCode': ''}
-        return render(request, 'mobileLogin.html', {'result':  result})
+        result = {'result': 0, 'accessToken': '12', 'errorCode': ''}
+        return HttpResponse(simplejson.dumps(result), 'application/json')
+        # return render(request, 'mobileLogin.html', {'result':  result})
 # def some_view(request):
 #     result = []
 #     result.append({"user":request.user})
