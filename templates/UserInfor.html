@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}재홍이의 홈페이지{% endblock %}
+
+{% block content %}
+
+   {% for users in user %}
+       <li>{{ users.username }}</li>
+   {% endfor %}
+
+    <br>
+
+   {% for user in userInfo %}
+       <li>{{ user.token }}</li>
+   {% endfor %}
+
+{% endblock %}

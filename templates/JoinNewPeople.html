@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join New Menber</title>
+</head>
+<body>
+
+    <form method="post" name="name" action="/register/">
+        {% csrf_token %}
+        <label for="newUserId">사용자 아이디:</label>
+        <Input type="text" id="newUserId" name="newUserId"><br>
+        <label for="newUserPassWord">사용자 비밀번호:</label>
+        <input type="password" id="newUserPassWord" name="newUserPassWord"><br>
+        <input type="submit" id="submit" value="회원가입하기">
+
+    </form>
+    <script>
+
+    </script>
+</body>
+</html>
