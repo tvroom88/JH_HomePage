@@ -5,13 +5,17 @@
 {% block content %}
 
    {% for users in user %}
-       <li>{{ users.username }}</li>
+       <li>{{ users }}</li>
    {% endfor %}
 
     <br>
 
    {% for user in userInfo %}
-       <li>{{ user.token }}</li>
+       <li>{{ user.user }}</li>
    {% endfor %}
+
+
+{#       <li>{{ userInfo }}</li>#}
+
 
 {% endblock %}

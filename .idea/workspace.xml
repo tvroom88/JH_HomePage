@@ -23,10 +23,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JH_HomePage/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="11" selection-start="69" selection-end="69" vertical-scroll-proportion="-3.969751" vertical-offset="2288" max-vertical-offset="3306">
+            <state line="140" column="57" selection-start="3992" selection-end="3992" vertical-scroll-proportion="0.22241993" vertical-offset="2535" max-vertical-offset="4066">
+              <folding>
+                <element signature="e#24#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInfor.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/UserInfor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="23" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="494">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="4" selection-start="759" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="950">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JH_HomePage/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="22" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2185">
               <folding />
             </state>
           </provider>
@@ -41,19 +79,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
+      <file leaf-file-name="main_page.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/main_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="38" selection-start="956" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="760">
+            <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="437">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="4" selection-start="759" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="950">
+            <state line="36" column="25" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="779">
               <folding />
             </state>
           </provider>
@@ -74,13 +112,13 @@
         <option value="$PROJECT_DIR$/templates/JoinNewPeople.html" />
         <option value="$PROJECT_DIR$/templates/login_page.html" />
         <option value="$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/db/models/fields/__init__.py" />
-        <option value="$PROJECT_DIR$/templates/UserInfor.html" />
         <option value="$PROJECT_DIR$/templates/Image.html" />
         <option value="$PROJECT_DIR$/JH_HomePage/settings.py" />
         <option value="$PROJECT_DIR$/MyPage/models.py" />
-        <option value="$PROJECT_DIR$/JH_HomePage/urls.py" />
-        <option value="$PROJECT_DIR$/templates/main_page.html" />
         <option value="$PROJECT_DIR$/templates/mobileLogin.html" />
+        <option value="$PROJECT_DIR$/templates/main_page.html" />
+        <option value="$PROJECT_DIR$/templates/UserInfor.html" />
+        <option value="$PROJECT_DIR$/JH_HomePage/urls.py" />
         <option value="$PROJECT_DIR$/MyPage/views.py" />
       </list>
     </option>
@@ -105,7 +143,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -116,7 +154,71 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JH_HomePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -391,7 +493,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -399,7 +501,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3598485" sideWeight="0.53989816" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21818182" sideWeight="0.67911714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3598485" sideWeight="0.6706282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -413,26 +515,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3598485" sideWeight="0.12903225" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293718" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3598485" sideWeight="0.53989816" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32088286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -454,16 +536,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/login_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="15" selection-start="515" selection-end="515" vertical-scroll-proportion="0.2764706" vertical-offset="229" max-vertical-offset="741" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/contrib/admin/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="263" max-vertical-offset="8189" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/utils/importlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="855" />
@@ -477,13 +549,6 @@
     <entry file="http://">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JH_HomePage/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="22" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.40214476" vertical-offset="1598" max-vertical-offset="2185">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Image.html">
@@ -501,26 +566,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="251" selection-end="251" vertical-scroll-proportion="0.49565217" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/UserInfor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="123" selection-end="153" vertical-scroll-proportion="0.25507247" vertical-offset="45" max-vertical-offset="418" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/http/response.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="465" column="6" selection-start="17187" selection-end="17187" vertical-scroll-proportion="0.0" vertical-offset="8352" max-vertical-offset="9652">
-          <folding />
-        </state>
+        <state line="465" column="6" selection-start="17187" selection-end="17187" vertical-scroll-proportion="0.0" vertical-offset="8352" max-vertical-offset="9652" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+    <entry file="file://$PROJECT_DIR$/JH_HomePage/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="4" selection-start="759" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="855">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
           <folding />
         </state>
       </provider>
@@ -532,17 +585,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JH_HomePage/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="22" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="8" selection-start="5259" selection-end="5295" vertical-scroll-proportion="0.33274022" vertical-offset="2416" max-vertical-offset="5016" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="4" selection-start="759" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/UserInfor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="23" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="38" selection-start="956" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="760">
+        <state line="36" column="25" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="779">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyPage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="69" selection-end="69" vertical-scroll-proportion="-3.969751" vertical-offset="2288" max-vertical-offset="3306">
-          <folding />
+        <state line="140" column="57" selection-start="3992" selection-end="3992" vertical-scroll-proportion="0.22241993" vertical-offset="2535" max-vertical-offset="4066">
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

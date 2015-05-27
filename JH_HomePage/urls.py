@@ -34,6 +34,7 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
 # handphone login
+    url(r'^mobileRegister/$', mobileRegister),
     url(r'^mobileLogin/$', mobileLogin),
 )
 

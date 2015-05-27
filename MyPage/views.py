@@ -45,7 +45,7 @@ def register(request):
         try:
             User.objects.get(username=username)
             return HttpResponse("이미 있는 아이디 입니다")
-        except :
+        except:
             users = User.objects.create_user(username=username, password=password)
             token = uuid.uuid4()
             custom = UserKey(user=users, token=token)
@@ -96,7 +96,9 @@ def logout(request):
 
 def userInformation(request):
      user = User.objects.all()
-     userkey = UserKey.objects.all()
+     userkey = UserKey.objects.filter()
+
+
 
 
      return render(request, 'UserInfor.html', {'user': user, 'userInfo': userkey})
@@ -108,39 +110,77 @@ def photo(request):
 
 # mobile login--------------------------------------------
 @csrf_exempt
+def mobileRegister(request):
+
+    if request.method == 'POST':
+        username = request.POST['newUserId']
+        password = request.POST['newUserPassWord']
+        try:
+            User.objects.get(username=username)
+            result = {'result': 1, 'accessToken': '', 'errorCode': 'Fail'}
+            return HttpResponse(simplejson.dumps(result), 'application/json')
+        except:
+            users = User.objects.create_user(username=username, password=password)
+            token = uuid.uuid4()
+            custom = UserKey(user=users, token=token)
+            custom.save()
+
+            if users is not None:
+                result = {'result': 1, 'accessToken': token, 'errorCode': 'Success'}
+                return HttpResponse(simplejson.dumps(result), 'application/json')
+
+
+
+@csrf_exempt
 def mobileLogin(request):
 
     if request.method == 'POST':
          #Get Parameter
-        user_id = request.POST['newUserId']
-        user_password = request.POST['newUserPassWord']
 
+        # user_id = request.POST['newUserId']
+        # user_password = request.POST['newUserPassWord']
+        access_token = request.POST['accessToken']
+        obj = UserKey.objects.get(token=access_token)
+        oobj = obj.user
+        user_id = oobj.username
+        user_password = oobj.password
         user = auth.authenticate(username=user_id, password=user_password)
         if user is not None:
             token = uuid.uuid4()
-            obj = UserKey.objects.get(user=user)
             obj.__dict__.update(user=user, token=token)
             obj.save()
 
             user_token = UserKey.objects.get(user=user).token
-            result = {'result': 1, 'accessToken': user_token}
+            result = {'result': 1, 'accessToken': user_token, 'errorCode': 'Success'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
         else:
-
-            result = {'result': 0, 'accessToken': ''}
+            result = {'result': 0, 'accessToken': '', 'errorCode': 'Fail'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
 
     # POST가 아닐경우?
     else:
-        result = {'result': 0, 'accessToken': '12', 'errorCode': ''}
+        result = {'result': 0, 'accessToken': '',  'errorCode': 'Fail'}
         return HttpResponse(simplejson.dumps(result), 'application/json')
-        # return render(request, 'mobileLogin.html', {'result':  result})
-# def some_view(request):
-#     result = []
-#     result.append({"user":request.user})
-#     result.append({"key":request.session.key})
-#     return HttpResponse(simplejson.dumps(result), mimetype='application/json')
 
+
+# ----------------------------------------------------------------------------------
+def check(request):
+
+    # 한번은 그냥되게
+
+
+
+    # 두번일경우는 로그인 싸인
+
+
+
+    # 로그인 했을 경우 가능
+    if request.method == 'POST':
+        result = {'Message': 'Success'}
+        return HttpResponse(simplejson.dumps(result), 'application/json')
+    else:
+        result = {'Message': 'Fail'}
+        return HttpResponse(simplejson.dumps(result), 'application/json')
 
 
 
