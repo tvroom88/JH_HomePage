@@ -118,7 +118,7 @@ def mobileRegister(request):
         password = request.POST['newUserPassWord']
         try:
             User.objects.get(username=username)
-            result = {'result': 0, 'accessToken': '', 'errorCode': 'Fail'}
+            result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
         except:
             user = User.objects.create_user(username=username, password=password)
@@ -132,7 +132,7 @@ def mobileRegister(request):
                 result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
                 return HttpResponse(simplejson.dumps(result), 'application/json')
     else:
-        result = {'result': 0, 'accessToken': '', 'errorCode': 'Fail'}
+        result = {'result': 0, 'accessToken': '', 'errorCode': 'Post Not Coming'}
         return HttpResponse(simplejson.dumps(result), 'application/json')
 
 
