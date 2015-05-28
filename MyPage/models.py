@@ -24,7 +24,7 @@ admin.site.register(UserInformation, UserInformationAdmin)
 
 class UserKey(models.Model):
     user = models.OneToOneField(User, unique=False)
-    token = models.CharField(max_length=100)
+    token = models.CharField(max_length=100, primary_key=True)
 
 # @receiver(post_save, sender=User)
 # def create_user_profile(sender, instance, created, **kwargs):

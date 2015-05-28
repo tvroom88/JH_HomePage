@@ -2,6 +2,7 @@
 import simplejson
 import datetime
 import uuid
+import base64
 
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -120,13 +121,15 @@ def mobileRegister(request):
             result = {'result': 0, 'accessToken': '', 'errorCode': 'Fail'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
         except:
-            users = User.objects.create_user(username=username, password=password)
-            token = uuid.uuid4()
-            custom = UserKey(user=users, token=token)
+            user = User.objects.create_user(username=username, password=password)
+            token = str(uuid.uuid4())
+            # token = (uuid.uuid4())
+            # token = base64.urlsafe_b64encode(uuid.uuid4().bytes)
+            custom = UserKey(user=user, token=token)
             custom.save()
 
-            if users is not None:
-                result = {'result': 1, 'accessToken': token, 'errorCode': 'Success'}
+            if user is not None:
+                result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
                 return HttpResponse(simplejson.dumps(result), 'application/json')
     else:
         result = {'result': 0, 'accessToken': '', 'errorCode': 'Fail'}
@@ -141,25 +144,46 @@ def mobileLogin(request):
     if request.method == 'POST':
          #Get Parameter
 
-        # user_id = request.POST['newUserId']
-        # user_password = request.POST['newUserPassWord']
+        user_id = request.POST['newUserId']
+        user_password = request.POST['newUserPassWord']
         access_token = request.POST['accessToken']
-        obj = UserKey.objects.get(token=access_token)
-        oobj = obj.user
-        user_id = oobj.username
-        user_password = oobj.password
-        user = auth.authenticate(username=user_id, password=user_password)
-        if user is not None:
-            token = uuid.uuid4()
-            obj.__dict__.update(user=user, token=token)
-            obj.save()
 
-            user_token = UserKey.objects.get(user=user).token
-            result = {'result': 1, 'accessToken': user_token, 'errorCode': 'Success'}
-            return HttpResponse(simplejson.dumps(result), 'application/json')
+        if access_token:
+            # 토큰으로 정보 불러오기
+            obj = UserKey.objects.get(token=access_token)
+            oobj = obj.user
+            user_id = oobj.username
+            user_password = oobj.password
+            user = auth.authenticate(username=user_id, password=user_password)
+            if user is not None:
+                # token = uuid.uuid4()
+                token = str(uuid.uuid4())
+                obj.__dict__.update(user=user, token=token)
+                # obj.save()
+                user_token = UserKey.objects.get(user=user).token
+
+                result = {'result': 1, 'accessToken': user_token, 'errorCode': 'accessToken exist'}
+                return HttpResponse(simplejson.dumps(result), 'application/json')
+            else:
+                result = {'result': 0, 'accessToken': '', 'errorCode': 'UserNone'}
+                return HttpResponse(simplejson.dumps(result), 'application/json')
+
         else:
-            result = {'result': 0, 'accessToken': '', 'errorCode': 'Fail'}
-            return HttpResponse(simplejson.dumps(result), 'application/json')
+            user = auth.authenticate(username=user_id, password=user_password)
+            if user is not None:
+                # token = uuid.uuid4()
+                token = str(uuid.uuid4())
+                obj = UserKey.objects.get(user=user)
+                obj.__dict__.update(user=user, token=token)
+                # obj.save()
+
+                user_token = obj.token
+
+                result = {'result': 1, 'accessToken': user_token, 'errorCode': 'accessToken None, id password exist'}
+                return HttpResponse(simplejson.dumps(result), 'application/json')
+            else:
+                result = {'result': 0, 'accessToken': '', 'errorCode': 'UserNone'}
+                return HttpResponse(simplejson.dumps(result), 'application/json')
 
     # POST가 아닐경우?
     else:
