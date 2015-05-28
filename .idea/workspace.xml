@@ -26,7 +26,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="0" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-0.26610646" vertical-offset="2280" max-vertical-offset="4959">
+            <state line="127" column="25" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.4257703" vertical-offset="2261" max-vertical-offset="4617">
               <folding>
                 <element signature="e#24#41#0" expanded="true" />
               </folding>
@@ -79,8 +79,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="1377" />
+    <option name="x" value="-1" />
+    <option name="width" value="1374" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -447,7 +447,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1377" height="728" extended-state="1" />
+    <frame x="-1" y="0" width="1374" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -455,7 +455,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22661597" sideWeight="0.6701571" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22713415" sideWeight="0.6701571" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3598485" sideWeight="0.6706282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -581,7 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyPage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-0.26610646" vertical-offset="2280" max-vertical-offset="4959">
+        <state line="127" column="25" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.4257703" vertical-offset="2261" max-vertical-offset="4617">
           <folding>
             <element signature="e#24#41#0" expanded="true" />
           </folding>
