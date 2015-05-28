@@ -11,6 +11,7 @@ from django.shortcuts import render_to_response, RequestContext, render
 from django.contrib import auth
 from django.contrib.auth.models import User
 from MyPage.models import *
+from django.core.exceptions import ObjectDoesNotExist
 
 
 # Create your views here.
@@ -115,11 +116,10 @@ def mobileRegister(request):
         password = request.POST['newUserPassWord']
 
         try:
-            User.objects.get(username=username)
+            a = User.objects.get(username=username)
             result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
-
-        except:
+        except User.DoesNotExist:
             user = User.objects.create_user(username=username, password=password)
             token = str(uuid.uuid4())
             # token = (uuid.uuid4())
