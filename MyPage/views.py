@@ -113,7 +113,7 @@ def mobileRegister(request):
     if request.method == 'POST':
         username = request.POST['newUserId']
         password = request.POST['newUserPassWord']
-        
+
         a = User.objects.get(username=username)
 
         if a is not None:
