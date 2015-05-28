@@ -114,44 +114,55 @@ def mobileRegister(request):
     if request.method == 'POST':
         username = request.POST['newUserId']
         password = request.POST['newUserPassWord']
+        post = User.objects.filter(username=username).exists()
 
-        try:
-            a = User.objects.get(username=username)
+        if post:
             result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
-        except User.DoesNotExist:
+        else:
             user = User.objects.create_user(username=username, password=password)
             token = str(uuid.uuid4())
-            # token = (uuid.uuid4())
-            # token = base64.urlsafe_b64encode(uuid.uuid4().bytes)
             custom = UserKey(user=user, token=token)
             custom.save()
             result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
-            #
-            # if user is not None:
-            #     result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
-            #     return HttpResponse(simplejson.dumps(result), 'application/json')
 
     else:
         result = {'result': 0, 'accessToken': '', 'errorCode': 'Post Not Coming'}
         return HttpResponse(simplejson.dumps(result), 'application/json')
 
 
+        # try:
+        #     User.objects.get(username=username)
+        #     result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
+        #     return HttpResponse(simplejson.dumps(result), 'application/json')
+        # except User.DoesNotExist:
+        #     user = User.objects.create_user(username=username, password=password)
+        #     token = str(uuid.uuid4())
+        #     # token = (uuid.uuid4())
+        #     # token = base64.urlsafe_b64encode(uuid.uuid4().bytes)
+        #     custom = UserKey(user=user, token=token)
+        #     custom.save()
+        #     result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
+        #     return HttpResponse(simplejson.dumps(result), 'application/json')
+            #
+            # if user is not None:
+            #     result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
+            #     return HttpResponse(simplejson.dumps(result), 'application/json')
+
+    # else:
+        # result = {'result': 0, 'accessToken': '', 'errorCode': 'Post Not Coming'}
+        # return HttpResponse(simplejson.dumps(result), 'application/json')
+
+
 
 @csrf_exempt
 def mobileLogin(request):
-
     if request.method == 'POST':
          #Get Parameter
-
-        user_id = request.POST['newUserId']
-        user_password = request.POST['newUserPassWord']
-        access_token = request.POST['accessToken']
-
-        if access_token:
+        if request.POST['accessToken']:
             # 토큰으로 정보 불러오기
-            obj = UserKey.objects.get(token=access_token)
+            obj = UserKey.objects.get(token=request.POST['accessToken'])
             oobj = obj.user
             user_id = oobj.username
             user_password = oobj.password
@@ -168,9 +179,8 @@ def mobileLogin(request):
             else:
                 result = {'result': 0, 'accessToken': '', 'errorCode': 'UserNone'}
                 return HttpResponse(simplejson.dumps(result), 'application/json')
-
         else:
-            user = auth.authenticate(username=user_id, password=user_password)
+            user = auth.authenticate(username=request.POST['newUserId'], password=request.POST['newUserPassWord'])
             if user is not None:
                 # token = uuid.uuid4()
                 token = str(uuid.uuid4())
