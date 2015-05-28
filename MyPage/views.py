@@ -99,9 +99,6 @@ def userInformation(request):
      user = User.objects.all()
      userkey = UserKey.objects.filter()
 
-
-
-
      return render(request, 'UserInfor.html', {'user': user, 'userInfo': userkey})
 
 
@@ -116,24 +113,46 @@ def mobileRegister(request):
     if request.method == 'POST':
         username = request.POST['newUserId']
         password = request.POST['newUserPassWord']
-        try:
-            User.objects.get(username=username)
+        
+        a = User.objects.get(username=username)
+
+        if a is not None:
             result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
-        except:
+
+        else:
             user = User.objects.create_user(username=username, password=password)
             token = str(uuid.uuid4())
-            # token = (uuid.uuid4())
-            # token = base64.urlsafe_b64encode(uuid.uuid4().bytes)
             custom = UserKey(user=user, token=token)
             custom.save()
-
             if user is not None:
                 result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
                 return HttpResponse(simplejson.dumps(result), 'application/json')
+
     else:
         result = {'result': 0, 'accessToken': '', 'errorCode': 'Post Not Coming'}
         return HttpResponse(simplejson.dumps(result), 'application/json')
+
+
+
+
+        # try:
+        #     User.objects.get(username=username)
+        #     result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
+        #     return HttpResponse(simplejson.dumps(result), 'application/json')
+        #
+        # except :
+        #     user = User.objects.create_user(username=username, password=password)
+        #     token = str(uuid.uuid4())
+        #     # token = (uuid.uuid4())
+        #     # token = base64.urlsafe_b64encode(uuid.uuid4().bytes)
+        #     custom = UserKey(user=user, token=token)
+        #     custom.save()
+        #
+        #     if user is not None:
+        #         result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
+        #         return HttpResponse(simplejson.dumps(result), 'application/json')
+
 
 
 
