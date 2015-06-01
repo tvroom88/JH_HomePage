@@ -22,23 +22,24 @@ class UserInformationAdmin(admin.ModelAdmin):
 
 admin.site.register(UserInformation, UserInformationAdmin)
 
-class UserKey(models.Model):
-    user = models.OneToOneField(User, unique=False)
-    token = models.CharField(max_length=100, primary_key=True)
+class Vote(models.Model):
+    image_url = models.URLField(max_length=500, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    vote = models.CharField(max_length=80, blank=True)
 
-# @receiver(post_save, sender=User)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         UserKey.objects.get_or_create(user=instance)
-#
-# post_save.connect(create_user_profile, sender=User)
+class VoteAdmin(admin.ModelAdmin):
+    list_display = ('image_url', 'created', 'vote')
+
+admin.site.register(Vote, VoteAdmin)
+
+
+class UserKey(models.Model):
+    user = models.OneToOneField(User)
+    token = models.CharField(max_length=100, primary_key=True)
+    # vote = models.ManyToManyField(ImageUrl)
+
 
 class UserKeyAdmin(admin.ModelAdmin):
     list_display = ('user', 'token')
 
 admin.site.register(UserKey, UserKeyAdmin)
-
-
-# def create_profile(sender, instance, created, **kwargs):
-#     if created:
-#         Profile.objects.get_or_create(user=instance)

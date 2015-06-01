@@ -36,6 +36,11 @@ urlpatterns = patterns('',
 # handphone login
     url(r'^mobileRegister/$', mobileRegister),
     url(r'^mobileLogin/$', mobileLogin),
+
+# imageurl
+    url(r'^auction/$', auction),
+
+    url(r'^a/$', a),
 )
 
 urlpatterns += staticfiles_urlpatterns()

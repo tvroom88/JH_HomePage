@@ -12,6 +12,10 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from MyPage.models import *
 from django.core.exceptions import ObjectDoesNotExist
+from django.forms.models import model_to_dict
+
+# ---------------------------------------
+from django.core import serializers
 
 
 # Create your views here.
@@ -115,57 +119,31 @@ def mobileRegister(request):
         username = request.POST['newUserId']
         password = request.POST['newUserPassWord']
         post = User.objects.filter(username=username).exists()
+        print 'a'
 
         if post:
             result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
         else:
             user = User.objects.create_user(username=username, password=password)
-            token = str(uuid.uuid4())
-            custom = UserKey(user=user, token=token)
-            custom.save()
-            result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
+            result = {'result': 1, 'errorCode': 'Success'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
 
     else:
         result = {'result': 0, 'accessToken': '', 'errorCode': 'Post Not Coming'}
         return HttpResponse(simplejson.dumps(result), 'application/json')
 
-
-        # try:
-        #     User.objects.get(username=username)
-        #     result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
-        #     return HttpResponse(simplejson.dumps(result), 'application/json')
-        # except User.DoesNotExist:
-        #     user = User.objects.create_user(username=username, password=password)
-        #     token = str(uuid.uuid4())
-        #     # token = (uuid.uuid4())
-        #     # token = base64.urlsafe_b64encode(uuid.uuid4().bytes)
-        #     custom = UserKey(user=user, token=token)
-        #     custom.save()
-        #     result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
-        #     return HttpResponse(simplejson.dumps(result), 'application/json')
-            #
-            # if user is not None:
-            #     result = {'result': 1, 'accessToken': custom.token, 'errorCode': 'Success'}
-            #     return HttpResponse(simplejson.dumps(result), 'application/json')
-
-    # else:
-        # result = {'result': 0, 'accessToken': '', 'errorCode': 'Post Not Coming'}
-        # return HttpResponse(simplejson.dumps(result), 'application/json')
-
-
-
 @csrf_exempt
 def mobileLogin(request):
     if request.method == 'POST':
          #Get Parameter
+
         if request.POST['accessToken']:
             # 토큰으로 정보 불러오기
             obj = UserKey.objects.get(token=request.POST['accessToken'])
-            oobj = obj.user
-            user_id = oobj.username
-            user_password = oobj.password
+            objInfo = obj.user
+            user_id = objInfo.username
+            user_password = objInfo.password
             user = auth.authenticate(username=user_id, password=user_password)
             if user is not None:
                 # token = uuid.uuid4()
@@ -201,48 +179,20 @@ def mobileLogin(request):
         result = {'result': 0, 'accessToken': '',  'errorCode': 'Fail'}
         return HttpResponse(simplejson.dumps(result), 'application/json')
 
-
+@csrf_exempt
+def a(request):
+    leads_as_json = serializers.serialize('json', User.objects.all())
+    return HttpResponse(simplejson.dumps(leads_as_json), 'application/json')
 # ----------------------------------------------------------------------------------
-def check(request):
-
-    # 한번은 그냥되게
-
-
-
-    # 두번일경우는 로그인 싸인
-
-
-
-    # 로그인 했을 경우 가능
+def auction(request):
     if request.method == 'POST':
-        result = {'Message': 'Success'}
-        return HttpResponse(simplejson.dumps(result), 'application/json')
+        accessToken = request.POST['accessToken']
+        onclick = request.POST['onclick']
+
+        voteValue = Vote.objects.all()
+        results = serializers.serialize('json', voteValue)
+        return HttpResponse(simplejson.dumps(results), 'application/json')
     else:
-        result = {'Message': 'Fail'}
-        return HttpResponse(simplejson.dumps(result), 'application/json')
-
-
-
-# def mobileLogin(request):
-#     if request.method == 'POST':
-#         user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
-#         if user is not None:
-#             if user.is_active:
-#                 .get(user=user)
-#                     result = {'result': 1, 'accessToken': token.token, 'errorCode': TOKEN_EXIST}
-#                     return HttpResponse(simplejson if UserKey.objects.filter(user=user).count() != 0:
-#                     token = UserKey.objects.dumps(result), 'application/json')
-#
-#                 token = UserKey.objects.create(user)
-#                 result = {'result': 1, 'accessToken': token.key, 'errorCode': SUCCESS_CODE}
-#                 return HttpResponse(simplejson.dumps(result), 'application/json')
-#
-#             else:
-#                 result = {'result': 0, 'accessToken': '', 'errorCode': USER_NOT_ACTIVE}
-#                 return HttpResponse(simplejson.dumps(result), 'application/json')
-#         else:
-#             result = {'result': 0, 'accessToken': '', 'errorCode': AUTHENTICATION_FAIL}
-#             return HttpResponse(simplejson.dumps(result), 'application/json')
-#
-#     else:
-#         return render_to_response('UserInfor.html', RequestContext(request))
+        voteValue = Vote.objects.all()
+        results = serializers.serialize('json', voteValue)
+        return HttpResponse(simplejson.dumps(results), 'application/json')
