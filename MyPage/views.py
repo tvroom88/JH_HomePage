@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import json
 import simplejson
 import datetime
 import uuid
@@ -12,7 +13,9 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from MyPage.models import *
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.serializers.json import DjangoJSONEncoder
 from django.forms.models import model_to_dict
+
 
 # ---------------------------------------
 from django.core import serializers
@@ -164,7 +167,7 @@ def mobileLogin(request):
                 token = str(uuid.uuid4())
                 obj = UserKey.objects.get(user=user)
                 obj.__dict__.update(user=user, token=token)
-                # obj.save()
+                obj.save()
 
                 user_token = obj.token
 
@@ -184,15 +187,38 @@ def a(request):
     leads_as_json = serializers.serialize('json', User.objects.all())
     return HttpResponse(simplejson.dumps(leads_as_json), 'application/json')
 # ----------------------------------------------------------------------------------
+@csrf_exempt
 def auction(request):
     if request.method == 'POST':
         accessToken = request.POST['accessToken']
         onclick = request.POST['onclick']
+        url = request.POST['url']
 
-        voteValue = Vote.objects.all()
-        results = serializers.serialize('json', voteValue)
-        return HttpResponse(simplejson.dumps(results), 'application/json')
+        # if accessToken:
+        #     userInfo = UserKey.objects.get(token=accessToken)
+        #     if onclick == "onclick":
+        #         # obj = VoteInfo.objects.get(id=1)
+        #         obj = VoteInfo.objects.get(image_url=url)
+        #         obj.__dict__.update(vote='clicked')
+        #         userInfo.votes.add(obj)
+        #         userInfo.save()
+        if onclick == "onclick":
+                # obj = VoteInfo.objects.get(id=1)
+            userInfo = UserKey.objects.get(token=123)
+            obj = VoteInfo.objects.get(id=1)
+            obj.__dict__.update(vote='clicked')
+            obj.save()
+            userInfo.votes.add(obj)
+
+        else:
+            obj = VoteInfo.objects.get(id=1)
+
+        # model_to_dict(instance, fields=[field.name for field in instance._meta.fields])
+        result = {'imageUrl': obj.image_url, 'vote': obj.vote}
+        return HttpResponse(json.dumps(result), 'application/json')
     else:
-        voteValue = Vote.objects.all()
-        results = serializers.serialize('json', voteValue)
-        return HttpResponse(simplejson.dumps(results), 'application/json')
+
+        # voteValue = Vote.objects.all().values()
+        # results = serializers.serialize('json', voteValue)
+        result = serializers.serialize('json', VoteInfo.objects.all())
+        return HttpResponse(simplejson.dumps(result), 'application/json')

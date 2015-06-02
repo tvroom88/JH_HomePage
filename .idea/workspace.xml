@@ -26,18 +26,16 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="0" selection-start="6468" selection-end="6468" vertical-scroll-proportion="0.3617571" vertical-offset="3470" max-vertical-offset="3876">
-              <folding>
-                <element signature="e#24#41#0" expanded="true" />
-              </folding>
+            <state line="169" column="26" selection-start="5529" selection-end="5529" vertical-scroll-proportion="-1.994832" vertical-offset="3698" max-vertical-offset="4085">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
+      <file leaf-file-name="main_page.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/main_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="18" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="874">
+            <state line="30" column="36" selection-start="1029" selection-end="1029" vertical-scroll-proportion="-7.714286" vertical-offset="354" max-vertical-offset="760">
               <folding />
             </state>
           </provider>
@@ -46,7 +44,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyPage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="10" selection-start="684" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="407" max-vertical-offset="969">
+            <state line="21" column="67" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="1102">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -73,8 +71,8 @@
         <option value="$PROJECT_DIR$/JH_HomePage/settings.py" />
         <option value="$PROJECT_DIR$/templates/mobileLogin.html" />
         <option value="$PROJECT_DIR$/templates/UserInfor.html" />
-        <option value="$PROJECT_DIR$/templates/main_page.html" />
         <option value="$PROJECT_DIR$/JH_HomePage/urls.py" />
+        <option value="$PROJECT_DIR$/templates/main_page.html" />
         <option value="$PROJECT_DIR$/MyPage/models.py" />
         <option value="$PROJECT_DIR$/MyPage/views.py" />
       </list>
@@ -458,7 +456,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18560606" sideWeight="0.7028862" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19166666" sideWeight="0.7028862" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3598485" sideWeight="0.6706282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -486,11 +484,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/MyPage/views.py</url>
-          <line>82</line>
+          <line>85</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/MyPage/views.py</url>
-          <line>128</line>
+          <line>131</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -498,89 +496,103 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/Image.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="171" selection-end="171" vertical-scroll-proportion="0.49565217" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photo/AuctionPhoto.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/http/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="465" column="6" selection-start="17187" selection-end="17187" vertical-scroll-proportion="0.0" vertical-offset="8352" max-vertical-offset="9652" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JH_HomePage/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="8" selection-start="5259" selection-end="5295" vertical-scroll-proportion="0.33274022" vertical-offset="2416" max-vertical-offset="5016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JH_HomePage/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="22" selection-start="2501" selection-end="2501" vertical-scroll-proportion="2.9803922" vertical-offset="684" max-vertical-offset="2185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/views/decorators/csrf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="4" selection-start="1740" selection-end="1740" vertical-scroll-proportion="0.0952381" vertical-offset="840" max-vertical-offset="1197" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main_page.html">
+    <entry file="file://$PROJECT_DIR$/templates/mobileLogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="570">
+        <state line="6" column="25" selection-start="92" selection-end="92" vertical-scroll-proportion="0.31754875" vertical-offset="0" max-vertical-offset="359" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/contrib/admin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.33333334" vertical-offset="1030" max-vertical-offset="8417" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="18" selection-start="1040" selection-end="1047" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="874">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mobileLogin.html">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/db/models/manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="92" selection-end="92" vertical-scroll-proportion="0.31754875" vertical-offset="0" max-vertical-offset="359">
+        <state line="131" column="8" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.33333334" vertical-offset="2246" max-vertical-offset="5377">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/UserInfor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="199" selection-end="199" vertical-scroll-proportion="0.6350975" vertical-offset="0" max-vertical-offset="475" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/contrib/admin/sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.33333334" vertical-offset="1030" max-vertical-offset="8417">
+        <state line="12" column="27" selection-start="199" selection-end="199" vertical-scroll-proportion="0.27565983" vertical-offset="134" max-vertical-offset="475">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/utils/autoreload.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="3434" selection-end="3434" vertical-scroll-proportion="-1.4341085" vertical-offset="2303" max-vertical-offset="3572" />
+        <state line="92" column="0" selection-start="3434" selection-end="3434" vertical-scroll-proportion="0.0" vertical-offset="1619" max-vertical-offset="3572">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/core/management/commands/runserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="18" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="874">
+        <state line="101" column="0" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.3495935" vertical-offset="1524" max-vertical-offset="2698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/core/management/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="309" column="0" selection-start="12377" selection-end="12377" vertical-scroll-proportion="0.3483146" vertical-offset="5538" max-vertical-offset="7923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/db/models/loading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="0" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.3495935" vertical-offset="1543" max-vertical-offset="6137">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="814" column="6" selection-start="31255" selection-end="31255" vertical-scroll-proportion="0.796748" vertical-offset="14697" max-vertical-offset="26961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/db/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
+          <folding>
+            <element signature="e#0#27#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyPage/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="36" selection-start="1029" selection-end="1029" vertical-scroll-proportion="-7.714286" vertical-offset="354" max-vertical-offset="760">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyPage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="10" selection-start="684" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="407" max-vertical-offset="969">
+        <state line="21" column="67" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1102">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -589,10 +601,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyPage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="0" selection-start="6468" selection-end="6468" vertical-scroll-proportion="0.3617571" vertical-offset="3470" max-vertical-offset="3876">
-          <folding>
-            <element signature="e#24#41#0" expanded="true" />
-          </folding>
+        <state line="169" column="26" selection-start="5529" selection-end="5529" vertical-scroll-proportion="-1.994832" vertical-offset="3698" max-vertical-offset="4085">
+          <folding />
         </state>
       </provider>
     </entry>

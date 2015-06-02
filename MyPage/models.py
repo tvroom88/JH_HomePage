@@ -7,11 +7,6 @@ from django.db.models.signals import post_save
 
 
 
-# Create your models here.
-# class RoomInformation(models.Model):
-#     name = models.CharField(max_length=30)
-#     image = modelsCharFI(max_length=50)
-
 
 class UserInformation(models.Model):
     username = models.CharField(max_length=80)
@@ -22,24 +17,36 @@ class UserInformationAdmin(admin.ModelAdmin):
 
 admin.site.register(UserInformation, UserInformationAdmin)
 
-class Vote(models.Model):
+class VoteInfo(models.Model):
     image_url = models.URLField(max_length=500, blank=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True, auto_now=True)
     vote = models.CharField(max_length=80, blank=True)
 
-class VoteAdmin(admin.ModelAdmin):
+    def __str__(self):
+        return self.image_url
+
+    def __unicode__(self):
+        return self.image_url
+
+class VoteInfoAdmin(admin.ModelAdmin):
     list_display = ('image_url', 'created', 'vote')
 
-admin.site.register(Vote, VoteAdmin)
+admin.site.register(VoteInfo, VoteInfoAdmin)
 
 
 class UserKey(models.Model):
     user = models.OneToOneField(User)
     token = models.CharField(max_length=100, primary_key=True)
-    # vote = models.ManyToManyField(ImageUrl)
+    votes = models.ManyToManyField('VoteInfo', related_name='vote_information', blank=True)
 
+    def get_vote(self):
+        return "\n".join([p.image_url for p in self.votes.all()])
+
+    def gig_musicians(self):
+        return self.votes.all()
 
 class UserKeyAdmin(admin.ModelAdmin):
-    list_display = ('user', 'token')
+    list_display = ('user', 'token', 'gig_musicians')
+
 
 admin.site.register(UserKey, UserKeyAdmin)
