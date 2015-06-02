@@ -18,7 +18,7 @@ class UserInformationAdmin(admin.ModelAdmin):
 admin.site.register(UserInformation, UserInformationAdmin)
 
 class VoteInfo(models.Model):
-    image_url = models.URLField(max_length=500, blank=True)
+    image_url = models.CharField(max_length=500, blank=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=True)
     vote = models.CharField(max_length=80, blank=True)
 
