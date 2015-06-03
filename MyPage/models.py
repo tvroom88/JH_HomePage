@@ -23,10 +23,10 @@ class VoteInfo(models.Model):
     vote = models.CharField(max_length=80, blank=True)
 
     def __str__(self):
-        return self.image_url
+        return self.image_url + "  " + self.vote
 
     def __unicode__(self):
-        return self.image_url
+        return self.image_url + "  " + self.vote
 
 class VoteInfoAdmin(admin.ModelAdmin):
     list_display = ('image_url', 'created', 'vote')

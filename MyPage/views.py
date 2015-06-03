@@ -202,23 +202,49 @@ def auction(request):
         #         obj.__dict__.update(vote='clicked')
         #         userInfo.votes.add(obj)
         #         userInfo.save()
-        if onclick == "onclick":
+        if onclick == 'onclick':
                 # obj = VoteInfo.objects.get(id=1)
             userInfo = UserKey.objects.get(token=123)
-            obj = VoteInfo.objects.get(id=1)
-            obj.__dict__.update(vote='clicked')
+            obj = VoteInfo.objects.get(image_url=url)
+            obj.__dict__.update(vote=onclick)
             obj.save()
             userInfo.votes.add(obj)
 
-        else:
-            obj = VoteInfo.objects.get(id=1)
+            objs = VoteInfo.objects.all()
+            dic = []
+            for a in objs:
+                result = {
+                'imageUrl': a.image_url,
+                'vote': a.vote,
+                'created': a.created,
+                }
+                dic.append(result)
 
-        # model_to_dict(instance, fields=[field.name for field in instance._meta.fields])
-        result = {'imageUrl': obj.image_url, 'vote': obj.vote}
-        return HttpResponse(json.dumps(result), 'application/json')
+        else:
+            objs = VoteInfo.objects.all()
+            dic = []
+            for a in objs:
+                result = {
+                'imageUrl': a.image_url,
+                'vote': a.vote,
+                'created': a.created,
+                }
+                dic.append(result)
+
+        return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
     else:
 
         # voteValue = Vote.objects.all().values()
         # results = serializers.serialize('json', voteValue)
-        result = serializers.serialize('json', VoteInfo.objects.all())
-        return HttpResponse(simplejson.dumps(result), 'application/json')
+        # result = serializers.serialize('json', VoteInfo.objects.all())
+        voteinfo = VoteInfo.objects.all()
+        dic = []
+        for a in voteinfo:
+            result = {
+                'imageUrl': a.image_url,
+                'vote': a.vote,
+                'created': a.created,
+            }
+            dic.append(result)
+
+        return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
