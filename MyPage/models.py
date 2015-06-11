@@ -36,17 +36,19 @@ admin.site.register(VoteInfo, VoteInfoAdmin)
 
 class UserKey(models.Model):
     user = models.OneToOneField(User)
-    token = models.CharField(max_length=100, primary_key=True)
+    token = models.CharField(max_length=255)
     votes = models.ManyToManyField('VoteInfo', related_name='vote_information', blank=True)
+    registrationId = models.CharField(max_length=255)
 
     def get_vote(self):
         return "\n".join([p.image_url for p in self.votes.all()])
 
-    def gig_musicians(self):
+    def get_votes(self):
         return self.votes.all()
 
 class UserKeyAdmin(admin.ModelAdmin):
-    list_display = ('user', 'token', 'gig_musicians')
+    list_display = ('user', 'token', 'get_votes', 'registrationId')
 
 
 admin.site.register(UserKey, UserKeyAdmin)
+

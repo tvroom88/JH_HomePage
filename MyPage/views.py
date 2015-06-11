@@ -106,8 +106,10 @@ def logout(request):
 def userInformation(request):
      user = User.objects.all()
      userkey = UserKey.objects.filter()
+     regId = UserKey.objects.values_list('registrationId', flat=True)
 
-     return render(request, 'UserInfor.html', {'user': user, 'userInfo': userkey})
+
+     return render(request, 'UserInfor.html', {'user': user, 'userInfo': userkey, 'regId': regId})
 
 
 def photo(request):
@@ -121,14 +123,16 @@ def mobileRegister(request):
     if request.method == 'POST':
         username = request.POST['newUserId']
         password = request.POST['newUserPassWord']
-        post = User.objects.filter(username=username).exists()
-        print 'a'
+        post = User.objects.filter(username=username)
 
         if post:
             result = {'result': 0, 'accessToken': '', 'errorCode': 'User exist'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
         else:
             user = User.objects.create_user(username=username, password=password)
+            user_key = UserKey(user=user)
+            user_key.save()
+
             result = {'result': 1, 'errorCode': 'Success'}
             return HttpResponse(simplejson.dumps(result), 'application/json')
 
@@ -140,19 +144,34 @@ def mobileRegister(request):
 def mobileLogin(request):
     if request.method == 'POST':
          #Get Parameter
+        accessToken = request.POST['accessToken']
+        registration_Id = request.POST['registration_Id']
+        token = str(uuid.uuid4())
 
-        if request.POST['accessToken']:
+        # Token.objects.filter(user=user).count() != 0:
+                    # token = Token.objects.get(user=user)
+                    # result = {'result': 1, 'accessToken': token.key, 'errorCode': TOKEN_EXIST}
+                    # return HttpResponse(simplejson.dumps(result), 'application/json')
+
+        # obj = UserKey.objects.get(token=accessToken)
+        # if accessToken:
+        # UserKey.objects.filter(token=accessToken)
+        if UserKey.objects.filter(token=accessToken).count() != 0:
             # 토큰으로 정보 불러오기
-            obj = UserKey.objects.get(token=request.POST['accessToken'])
-            objInfo = obj.user
-            user_id = objInfo.username
-            user_password = objInfo.password
-            user = auth.authenticate(username=user_id, password=user_password)
+            obj = UserKey.objects.get(token=accessToken)
+            info_object = obj.user
+            user_id = info_object.username
+            user_password = info_object.password
+
+            print user_id
+            print user_password
+
+            # user = auth.authenticate(username=user_id, password=user_password)
+            user = User.objects.filter(username=user_id, password=user_password)
             if user is not None:
-                # token = uuid.uuid4()
-                token = str(uuid.uuid4())
-                obj.__dict__.update(user=user, token=token)
-                # obj.save()
+
+                obj.__dict__.update(user=user, token=token, registrationId=registration_Id)
+                obj.save()
                 user_token = UserKey.objects.get(user=user).token
 
                 result = {'result': 1, 'accessToken': user_token, 'errorCode': 'accessToken exist'}
@@ -163,10 +182,9 @@ def mobileLogin(request):
         else:
             user = auth.authenticate(username=request.POST['newUserId'], password=request.POST['newUserPassWord'])
             if user is not None:
-                # token = uuid.uuid4()
-                token = str(uuid.uuid4())
+                # token = str(uuid.uuid4())
                 obj = UserKey.objects.get(user=user)
-                obj.__dict__.update(user=user, token=token)
+                obj.__dict__.update(user=user, token=token, registrationId=registration_Id)
                 obj.save()
 
                 user_token = obj.token
@@ -248,3 +266,29 @@ def auction(request):
             dic.append(result)
 
         return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
+
+# @csrf_exempt
+# def send_message(request):
+#     regs_id = list()
+#     for device in devices_a :
+#         regs_id.append(device.token_string)
+#
+#     message = json.dumps(message)
+#
+#     values = {
+#         'registration_ids': regs_id,
+#         'collapse_key': "message" ,
+#         'data': {"message":str(msg.message)}
+#     }
+#
+#     headers = {
+#         'UserAgent': "GCM-Server",
+#         'Content-Type': 'application/json',
+#         'Authorization': 'key=' + settings.GCM_APIKEY,
+#     }
+#
+#     response = requests.post(url="https://android.googleapis.com/gcm/send", data=json.dumps(values), headers=headers)
+#
+#     r = json.loads(response.content)
+#     msg.nbr_android_recieved = r["success"]
+
