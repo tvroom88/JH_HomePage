@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="0" selection-start="5418" selection-end="5418" vertical-scroll-proportion="0.21" vertical-offset="2880" max-vertical-offset="5415">
+            <state line="286" column="49" selection-start="9689" selection-end="9776" vertical-scroll-proportion="0.0" vertical-offset="5015" max-vertical-offset="5415">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyPage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="9" selection-start="1100" selection-end="1105" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1045">
+            <state line="21" column="35" selection-start="650" selection-end="650" vertical-scroll-proportion="0.76" vertical-offset="0" max-vertical-offset="1045">
               <folding />
             </state>
           </provider>
@@ -78,10 +78,10 @@
         <option value="$PROJECT_DIR$/JH_HomePage/settings.py" />
         <option value="$PROJECT_DIR$/templates/mobileLogin.html" />
         <option value="$PROJECT_DIR$/JH_HomePage/urls.py" />
-        <option value="$PROJECT_DIR$/MyPage/models.py" />
         <option value="$PROJECT_DIR$/templates/main_page.html" />
         <option value="$PROJECT_DIR$/templates/UserInfor.html" />
         <option value="$PROJECT_DIR$/MyPage/views.py" />
+        <option value="$PROJECT_DIR$/MyPage/models.py" />
       </list>
     </option>
   </component>
@@ -477,9 +477,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159091" sideWeight="0.5280136" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159091" sideWeight="0.3582343" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159091" sideWeight="0.19524617" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159091" sideWeight="0.36672327" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27504244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -582,13 +582,6 @@
         <state line="4865" column="8" selection-start="166770" selection-end="166844" vertical-scroll-proportion="0.3325" vertical-offset="92302" max-vertical-offset="96957" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/UserInfor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="219" selection-end="219" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="399">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="35" selection-start="322" selection-end="322" vertical-scroll-proportion="-0.6785714" vertical-offset="171" max-vertical-offset="798">
@@ -596,16 +589,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+    <entry file="file://$PROJECT_DIR$/MyPage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="9" selection-start="1100" selection-end="1105" vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="1045">
+        <state line="286" column="49" selection-start="9689" selection-end="9776" vertical-scroll-proportion="0.0" vertical-offset="5015" max-vertical-offset="5415">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/UserInfor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="0" selection-start="5418" selection-end="5418" vertical-scroll-proportion="0.21" vertical-offset="2880" max-vertical-offset="5415">
+        <state line="12" column="20" selection-start="219" selection-end="219" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="35" selection-start="650" selection-end="650" vertical-scroll-proportion="0.76" vertical-offset="0" max-vertical-offset="1045">
           <folding />
         </state>
       </provider>

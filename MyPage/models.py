@@ -19,7 +19,7 @@ admin.site.register(UserInformation, UserInformationAdmin)
 
 class VoteInfo(models.Model):
     image_url = models.CharField(max_length=500, blank=True)
-    created = models.DateTimeField(auto_now_add=True, auto_now=True)
+    created = models.DateTimeField(auto_now=True)
     vote = models.CharField(max_length=80, blank=True)
 
     def __str__(self):
