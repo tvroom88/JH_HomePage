@@ -34,15 +34,18 @@ class VoteInfoAdmin(admin.ModelAdmin):
 
 class Token(models.Model):
     fb_user = models.OneToOneField(FBlogin)
-    votes = models.ManyToManyField(VoteInfo)
     token = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now=True)
+    votes = models.ManyToManyField(VoteInfo, blank=True)
 
     def __str__(self):
         return self.token
 
+    def get_vote(self):
+        return "\n".join([p.image_url for p in self.votes.all()])
+
 class TokenAdmin(admin.ModelAdmin):
-    list_display = ('fb_user', 'token', 'created')
+    list_display = ('fb_user', 'token', 'created', 'get_vote')
 
 admin.site.register(Token, TokenAdmin)
 

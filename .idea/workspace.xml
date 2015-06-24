@@ -23,13 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="293" column="40" selection-start="9817" selection-end="9817" vertical-scroll-proportion="7.4430695" vertical-offset="2560" max-vertical-offset="6270">
+            <state line="280" column="35" selection-start="9287" selection-end="9287" vertical-scroll-proportion="0.0" vertical-offset="5030" max-vertical-offset="6156">
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoreload.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/utils/autoreload.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="222" column="0" selection-start="7653" selection-end="7653" vertical-scroll-proportion="0.0" vertical-offset="3875" max-vertical-offset="6042">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyPage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="44" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="1349">
+            <state line="46" column="28" selection-start="1285" selection-end="1285" vertical-scroll-proportion="1.740099" vertical-offset="76" max-vertical-offset="1406">
               <folding />
             </state>
           </provider>
@@ -83,8 +92,8 @@
         <option value="$PROJECT_DIR$/MyPage/gcm.py" />
         <option value="$PROJECT_DIR$/JH_HomePage/urls.py" />
         <option value="$PROJECT_DIR$/templates/main_page.html" />
-        <option value="$PROJECT_DIR$/MyPage/models.py" />
         <option value="$PROJECT_DIR$/MyPage/views.py" />
+        <option value="$PROJECT_DIR$/MyPage/models.py" />
       </list>
     </option>
   </component>
@@ -536,20 +545,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyPage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="192" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="5795">
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/gcm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="703" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="39" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
@@ -620,19 +615,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+    <entry file="file://$PROJECT_DIR$/MyPage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="44" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1349">
+        <state line="280" column="35" selection-start="9287" selection-end="9287" vertical-scroll-proportion="0.0" vertical-offset="5030" max-vertical-offset="6156">
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/utils/autoreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="0" selection-start="7653" selection-end="7653" vertical-scroll-proportion="0.0" vertical-offset="3875" max-vertical-offset="6042">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyPage/views.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/django/contrib/admin/options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="293" column="40" selection-start="9817" selection-end="9817" vertical-scroll-proportion="7.4430695" vertical-offset="2560" max-vertical-offset="6270">
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
+        <state line="547" column="6" selection-start="22492" selection-end="22492" vertical-scroll-proportion="-1.3613862" vertical-offset="9974" max-vertical-offset="37107">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyPage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="28" selection-start="1285" selection-end="1285" vertical-scroll-proportion="1.740099" vertical-offset="76" max-vertical-offset="1406">
+          <folding />
         </state>
       </provider>
     </entry>

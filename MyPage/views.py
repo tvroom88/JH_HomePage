@@ -272,14 +272,7 @@ def auction(request):
         onclick = request.POST['onclick']
         url = request.POST['url']
 
-        # if accessToken:
-        #     userInfo = UserKey.objects.get(token=accessToken)
-        #     if onclick == "onclick":
-        #         # obj = VoteInfo.objects.get(id=1)
-        #         obj = VoteInfo.objects.get(image_url=url)
-        #         obj.__dict__.update(vote='clicked')
-        #         userInfo.votes.add(obj)
-        #         userInfo.save()
+
         if onclick == 'onclick':
                 # obj = VoteInfo.objects.get(id=1)
             # onclick이 눌려진다면 토큰에 눌렀다는 정보 넣어주기
@@ -295,6 +288,7 @@ def auction(request):
                 'created': a.created,
                 }
                 dic.append(result)
+            return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
 
         else:
             objs = VoteInfo.objects.all()
@@ -305,8 +299,8 @@ def auction(request):
                 'created': a.created,
                 }
                 dic.append(result)
+            return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
 
-        return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
     else:
 
         # voteValue = Vote.objects.all().values()
