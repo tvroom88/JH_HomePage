@@ -26,7 +26,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="299" column="13" selection-start="9955" selection-end="9955" vertical-scroll-proportion="0.012376238" vertical-offset="5676" max-vertical-offset="6327">
+            <state line="293" column="40" selection-start="9817" selection-end="9817" vertical-scroll-proportion="7.4430695" vertical-offset="2560" max-vertical-offset="6270">
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -37,7 +37,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="18" selection-start="1031" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="950">
+            <state line="45" column="31" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="950">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyPage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="44" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1349">
+            <state line="36" column="44" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="1349">
               <folding />
             </state>
           </provider>
@@ -615,7 +615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JH_HomePage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1031" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="950">
+        <state line="45" column="31" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="950">
           <folding />
         </state>
       </provider>
@@ -629,7 +629,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyPage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="13" selection-start="9955" selection-end="9955" vertical-scroll-proportion="0.012376238" vertical-offset="5676" max-vertical-offset="6327">
+        <state line="293" column="40" selection-start="9817" selection-end="9817" vertical-scroll-proportion="7.4430695" vertical-offset="2560" max-vertical-offset="6270">
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>

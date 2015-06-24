@@ -292,7 +292,6 @@ def auction(request):
             for a in objs:
                 result = {
                 'imageUrl': a.image_url,
-                'vote': a.vote,
                 'created': a.created,
                 }
                 dic.append(result)
@@ -303,7 +302,6 @@ def auction(request):
             for a in objs:
                 result = {
                 'imageUrl': a.image_url,
-                'vote': a.vote,
                 'created': a.created,
                 }
                 dic.append(result)
@@ -319,7 +317,6 @@ def auction(request):
         for a in voteinfo:
             result = {
                 'imageUrl': a.image_url,
-                'vote': a.vote,
                 'created': a.created,
             }
             dic.append(result)
