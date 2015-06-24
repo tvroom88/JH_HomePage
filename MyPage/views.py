@@ -3,6 +3,7 @@ import json
 import simplejson
 import datetime
 import uuid
+import requests
 import base64
 
 from django.shortcuts import render
@@ -14,7 +15,7 @@ from django.contrib.auth.models import User
 from MyPage.models import *
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.serializers.json import DjangoJSONEncoder
-from django.forms.models import model_to_dict
+from django.core.urlresolvers import reverse
 
 
 # ---------------------------------------
@@ -35,6 +36,7 @@ def hello(request):
 
 @csrf_exempt
 def current_datetime(request):
+
     now = datetime.datetime.now()
     item = {"jaehong","jaehoon","mother","father"}
     return render(request, 'current_datetime.html', {'current_date': now, 'item': item})
@@ -145,7 +147,6 @@ def mobileLogin(request):
     if request.method == 'POST':
          #Get Parameter
         accessToken = request.POST['accessToken']
-        registration_Id = request.POST['registration_Id']
         token = str(uuid.uuid4())
 
         # Token.objects.filter(user=user).count() != 0:
@@ -170,7 +171,7 @@ def mobileLogin(request):
             user = User.objects.filter(username=user_id, password=user_password)
             if user is not None:
 
-                obj.__dict__.update(user=user, token=token, registrationId=registration_Id)
+                obj.__dict__.update(user=user, token=token)
                 obj.save()
                 user_token = UserKey.objects.get(user=user).token
 
@@ -184,7 +185,7 @@ def mobileLogin(request):
             if user is not None:
                 # token = str(uuid.uuid4())
                 obj = UserKey.objects.get(user=user)
-                obj.__dict__.update(user=user, token=token, registrationId=registration_Id)
+                obj.__dict__.update(user=user, token=token)
                 obj.save()
 
                 user_token = obj.token
@@ -204,7 +205,66 @@ def mobileLogin(request):
 def a(request):
     leads_as_json = serializers.serialize('json', User.objects.all())
     return HttpResponse(simplejson.dumps(leads_as_json), 'application/json')
-# ----------------------------------------------------------------------------------
+
+
+@csrf_exempt
+def fblogin(request):
+    if request.method == 'POST':
+        username = request.POST['newUserId']
+        password = request.POST['newUserPassWord']
+        user_token = request.POST['accessToken']
+
+        newToken = str(uuid.uuid4())
+
+        try:
+            # 유저가 존재할경우 유저정보 가져오기
+            userExist = FBlogin.objects.filter(user_id=username)
+
+            # 모바일에서 토큰이 잘 온다면
+            if user_token:
+
+                # 토큰은 잘왔지만 토큰이 저장되있는 토큰과 다를경우
+                update_token = Token.objects.get(fb_user=userExist)
+
+                if update_token.token == user_token:
+                    update_token.__dict__.update(token=newToken)
+                    update_token.save()
+
+                else:
+                    update_token = Token.objects.get(fb_user=userExist)
+
+
+            # 유저가 존재하지만 token이 안올경우
+            else:
+                update_token = Token.objects.get(fb_user=userExist)
+
+            sendToken = update_token.token
+
+
+            result = {'result': 1, 'accessToken': sendToken, 'errorCode': 'UserExist, Change token'}
+            return HttpResponse(simplejson.dumps(result), 'application/json')
+        except:
+            # 유저정보가 없다면 유저 저장해주고
+            newUser = FBlogin(user_id=username, password=password)
+            newUser.save()
+
+            # 토큰모델에도 저장해줌
+            newUserToken = Token(fb_user=newUser, token=newToken)
+            newUserToken.save()
+
+            # 그다음 유저 아이디랑 패스워드 토큰을 같이 저장해준다
+
+            result = {'result': 1, 'accessToken': newUserToken.token, 'errorCode': 'makeUser'}
+            return HttpResponse(simplejson.dumps(result), 'application/json')
+    else:
+        result = {'result': 0, 'accessToken': '', 'errorCode': 'UserNone'}
+        return HttpResponse(simplejson.dumps(result), 'application/json')
+
+
+
+
+
+
 @csrf_exempt
 def auction(request):
     if request.method == 'POST':
@@ -222,10 +282,9 @@ def auction(request):
         #         userInfo.save()
         if onclick == 'onclick':
                 # obj = VoteInfo.objects.get(id=1)
-            userInfo = UserKey.objects.get(token=123)
+            # onclick이 눌려진다면 토큰에 눌렀다는 정보 넣어주기
+            userInfo = Token.objects.get(token=accessToken)
             obj = VoteInfo.objects.get(image_url=url)
-            obj.__dict__.update(vote=onclick)
-            obj.save()
             userInfo.votes.add(obj)
 
             objs = VoteInfo.objects.all()
@@ -266,29 +325,3 @@ def auction(request):
             dic.append(result)
 
         return HttpResponse(json.dumps(dic, cls=DjangoJSONEncoder), 'application/json')
-
-# @csrf_exempt
-# def send_message(request):
-#     regs_id = list()
-#     for device in devices_a :
-#         regs_id.append(device.token_string)
-#
-#     message = json.dumps(message)
-#
-#     values = {
-#         'registration_ids': regs_id,
-#         'collapse_key': "message" ,
-#         'data': {"message":str(msg.message)}
-#     }
-#
-#     headers = {
-#         'UserAgent': "GCM-Server",
-#         'Content-Type': 'application/json',
-#         'Authorization': 'key=' + settings.GCM_APIKEY,
-#     }
-#
-#     response = requests.post(url="https://android.googleapis.com/gcm/send", data=json.dumps(values), headers=headers)
-#
-#     r = json.loads(response.content)
-#     msg.nbr_android_recieved = r["success"]
-

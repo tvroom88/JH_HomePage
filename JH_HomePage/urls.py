@@ -24,6 +24,8 @@ urlpatterns = patterns('',
     url(r'^login/$', login),
     url(r'^logout/$', logout),
 
+
+
     url(r'^user/$', userInformation),
 
 
@@ -37,9 +39,11 @@ urlpatterns = patterns('',
     url(r'^mobileRegister/$', mobileRegister),
     url(r'^mobileLogin/$', mobileLogin),
 
+    url(r'^fbLogin/$', fblogin),
+
+
 # imageurl
     url(r'^auction/$', auction),
-
     url(r'^a/$', a),
 )
 
